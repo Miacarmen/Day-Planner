@@ -1,0 +1,9 @@
+.row {
+    background-color: lightblue;
+    border: solid 1px black;
+}
+
+.col {
+    background-color: lightpink;
+    border: solid 1px black;
+}
