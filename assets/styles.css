@@ -36,11 +36,10 @@ tbody {
     cursor: pointer;
 }
 
-
-/* textarea {
+textarea {
     resize: none;
     outline: none;
-} */
+}
 
 
 /* timeBlock colors */
