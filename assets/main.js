@@ -13,8 +13,6 @@ $(document).ready(function() {
 
 
 
-
-
 // function to color code past, present, and future time blocks 
 var highlight = function() {
     $('tbody tr').each(function(hour) {
@@ -28,40 +26,34 @@ var highlight = function() {
         if (timeBlock < dateTime) {
             // turn those timeBlocks grey
             $(this).addClass('past');
-        } else if (timeBlock === dateTime) {
-            $(this).removeClass('past future');
-            $(this).addClass('present');
-        } else {
+            // if(timeBlock = dateTime)
+        } else if (timeBlock > dateTime) {
+            // turn that block green
             $(this).addClass('future');
+            // if(timeBlock > dateTime)
+        } else {
+            // turn future time blocks pink
+            $(this).addClass('present');
+            // $(this).addClass('future');
         }
     });
 
-
-    // if time is now, highlight the appropriate timeBlock Green
 };
 
 highlight();
 
-// function to enable type event/task onClick
-var taskInput = $('.event');
-
-var typeTask = function() {
-    taskInput.click(function() {
-
-    })
-}
-
-
+// function to enable type event/task onClick of add btn
 $('.btnAdd').on('click', function() {
     console.log($(this).parent().siblings(".event").children("textarea").val());
     var task = $(this).parent().siblings(".event").children("textarea").val();
     var timeBlock = $(this).parent().siblings(".event").children("textarea").attr('id');
     console.log(timeBlock);
-
+    // save to local storage
     localStorage.setItem(timeBlock, task);
 });
 
 
+// function to store task on refresh
 $('textarea').each(function() {
     console.log($(this).attr('id'));
     $(this).val(localStorage.getItem($(this).attr('id')));
@@ -69,19 +61,8 @@ $('textarea').each(function() {
 
 
 
-// function for save btn
-var addTask = function() {
-    // onClick it saves the event entered above in local storage
-
-
-    // if page is refreshed, the saved task is still shown
-}
-
-
 
 // function for delete btn
-var deleteTask = function() {
-    $('.btnDelete').click(function() {
+$('.btnDelete').click(function() {
 
-    })
-}
+});

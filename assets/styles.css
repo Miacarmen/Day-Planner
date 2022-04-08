@@ -11,15 +11,27 @@ body {
 
 .today {
     font-size: 25px;
+    padding-top: 10px;
 }
 
 .dateTime {
     font-size: 18px;
 }
 
+th {
+    color: #e2d5de;
+}
+
 .btn {
     font-size: 10px;
     cursor: pointer;
+    align-items: right;
+}
+
+textarea {
+    resize: none;
+    /* background: transparent; */
+    outline: none;
 }
 
 
