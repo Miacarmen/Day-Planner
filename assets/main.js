@@ -1,14 +1,12 @@
 // function to display current day/time
-// Day, Month, Date, Year, time
-// setInterval for time
 var date = $('.dateTime');
 var getDate = function() {
 
     today = moment(new Date());
-
+    // Day, Month, Date, Year, time
     date.html(today.format('dddd, MMMM Do, YYYY, h:mm:ss a'));
 };
-
+// setInterval for current time
 $(document).ready(function() {
     setInterval(getDate, 100);
 });
@@ -17,23 +15,30 @@ $(document).ready(function() {
 
 
 
-// function to color code current time and past time
+// function to color code past, present, and future time blocks 
 var highlight = function() {
     $('tbody tr').each(function(hour) {
-            console.log($(this));
-            var timeBlock = $(this).attr('id').split('hour-')[1];
-            console.log(timeBlock);
-            var dateTime = moment().hour();
-            if (timeBlock < dateTime) {
-                $(this).addClass('past');
-            }
-
-        })
+        console.log($(this));
+        // get current timeBlock
+        var timeBlock = $(this).attr('id').split('hour-')[1];
+        console.log(timeBlock);
+        // get the current Hour
+        var dateTime = moment().hour();
         // if(timeBlock > dateTime)
-        // turn those timeBlocks grey
+        if (timeBlock < dateTime) {
+            // turn those timeBlocks grey
+            $(this).addClass('past');
+        } else if (timeBlock === dateTime) {
+            $(this).removeClass('past future');
+            $(this).addClass('present');
+        } else {
+            $(this).addClass('future');
+        }
+    });
+
 
     // if time is now, highlight the appropriate timeBlock Green
-}
+};
 
 highlight();
 
