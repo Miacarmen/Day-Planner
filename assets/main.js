@@ -74,7 +74,7 @@ $('.btnDelete').click(function() {
     $("textarea").each(function() {
         console.log($(this).attr("id"));
         $(this).val(localStorage.getItem($(this).attr("id")));
-        $(this).val(localStorage.empty($(this).attr("id")));
+        $(this).val(localStorage.removeItem($(this).attr("id")));
     })
 
 });
