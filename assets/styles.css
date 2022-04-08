@@ -19,4 +19,5 @@ body {
 
 .btn {
     font-size: 10px;
+    cursor: pointer;
 }

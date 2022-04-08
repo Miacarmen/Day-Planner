@@ -16,16 +16,44 @@ $(document).ready(function() {
 
 $('.content-container').addClass('background-color', blue);
 
+
+
+
 // function to color code current time and past time
+var highlight = function() {
+    // if(timeBlock > dateTime)
+    // turn those timeBlocks grey
+
+    // if time is now, highlight the appropriate timeBlock Green
+}
 
 
-// function to enable time block onclick and type event/task
+// function to enable type event/task onClick
+var taskInput = $('.event');
+
+var typeTask = function() {
+    taskInput.click(function() {
+
+    })
+}
+
 
 
 // function for save btn
+var addTask = function() {
+    // onClick it saves the event entered above in local storage
+    $('.btnAdd').click(function() {
 
-// onClick it saves the event entered above in local storage
+    })
+
+    // if page is refreshed, the saved task is still shown
+}
 
 
 
-// if page is refreshed, the saved task is still shown
+// function for delete btn
+var deleteTask = function() {
+    $('.btnDelete').click(function() {
+
+    })
+}
