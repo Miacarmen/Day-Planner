@@ -18,21 +18,29 @@ body {
     font-size: 18px;
 }
 
+.timeBlock {
+    font-size: 17px;
+}
+
 th {
     color: #e2d5de;
+    font-size: 18px;
+}
+
+tbody {
+    align-items: center;
 }
 
 .btn {
-    font-size: 10px;
+    align-items: center;
     cursor: pointer;
-    align-items: right;
 }
 
-textarea {
+
+/* textarea {
     resize: none;
-    /* background: transparent; */
     outline: none;
-}
+} */
 
 
 /* timeBlock colors */
