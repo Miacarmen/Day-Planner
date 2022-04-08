@@ -21,3 +21,14 @@ body {
     font-size: 10px;
     cursor: pointer;
 }
+
+
+/* timeBlock colors */
+
+.past {
+    background-color: lightgray;
+}
+
+.present {
+    background-color: lightgreen;
+}
