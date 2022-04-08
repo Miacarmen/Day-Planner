@@ -65,7 +65,19 @@ $("textarea").each(function() {
 
 
 // function for delete btn
-// $('.btnDelete').click(function() {
+$('.btnDelete').click(function() {
+    console.log($(this).parent().siblings(".event").children("textarea").val());
+    var task = console.log($(this).parent().siblings(".event").children("textarea").val());
+    var timeBlock = $(this).parent().siblings('.event').children("textarea").attr("id");
+    console.log(timeBlock);
+
+    $("textarea").each(function() {
+        console.log($(this).attr("id"));
+        $(this).val(localStorage.getItem($(this).attr("id")));
+        $(this).val(localStorage.removeItem($(this).attr("id")));
+    })
+
+});
 
 
-// });
+// need to figure out how to delete just one item
