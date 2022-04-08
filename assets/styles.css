@@ -1,0 +1,18 @@
+body {
+    background-color: #e2d5de;
+    font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: rgb(52, 58, 63);
+    color: #e2d5de;
+}
+
+.today {
+    font-size: 25px;
+}
+
+.dateTime {
+    font-size: 18px;
+}

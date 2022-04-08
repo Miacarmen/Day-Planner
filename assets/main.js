@@ -1,7 +1,7 @@
 // function to display current day/time
 // Day, Month, Date, Year, time
 // setInterval for time
-var date = $('#dateTime');
+var date = $('.dateTime');
 var getDate = function() {
 
     today = moment(new Date());
