@@ -1,7 +1,7 @@
 # Day-Planner
 
 ## Table of Contents
-1.  Description
+1. Description
 2. Installation
 3. Deployed Link
 4. Built With
@@ -62,6 +62,7 @@ git@github.com:Miacarmen/Day-Planner.git
 * Add or Delete tasks for each hour
 * Live time update highlights the current task to be completed, which are to be done in the future, and which are in the past
 
+![Walkthrough](./assets/images/day-planner.gif)
 
 ## Authors
 * **Mia Carmen**
